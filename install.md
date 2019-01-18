@@ -19,7 +19,7 @@ Install the following softare and create service instances as mentioned below:
     ```
     >**Note**: 
     >* If you are on Windows, instead of using `sudo`, run the above command (and the ones below) in a command prompt opened in administrative mode.
-    >** Please refer [MFP documentation](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/application-development/sdk/cordova/) for compatible versions of Cordova.
+    >* Please refer [MFP documentation](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/application-development/sdk/cordova/) for compatible versions of Cordova.
 
 3. Install Ionic and check the Ionic version by running the following command.
 
@@ -29,7 +29,7 @@ Install the following softare and create service instances as mentioned below:
     3.19.0
     ```
 
-4. Install IBM MobileFirst Platform CLI
+4. Install IBM Mobile Foundation CLI
 
     ```
     $ sudo npm install -g mfpdev-cli
@@ -48,7 +48,9 @@ Install the following softare and create service instances as mentioned below:
     ```
 
 6. Install Maven.
+
     On Mac, you can use `brew install` for installing Maven as shown below:
+
         ```
         $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
         $ brew install maven
@@ -65,19 +67,34 @@ Install the following softare and create service instances as mentioned below:
 8. Install an [IDE for TypeScript](https://www.typescriptlang.org/index.html#download-links) such as [Atom](https://atom.io/) on Mac.
 
     After installing [Atom](https://atom.io/), install TypeScript plugin for Atom as shown below.
+
         ```
         apm install atom-typescript
         ```
 
-9. Create an [IBM Cloud account](https://cloud.ibm.com/registration), if you don't have one and login with your IBM Cloud credentials.
+9. Download and install Android Studio from [https://developer.android.com/studio/index.html](https://developer.android.com/studio/index.html).
 
-10. Create a Cloudant database by clicking on `Catalog` and select [*Cloudant*](https://cloud.ibm.com/catalog/services/cloudant) service under `Databases`. Click on `Create`.
+10. Install Android SDK Platform 23 (or higher) as below:
+    - Launch Android Studio.
+    - Click on `Configure` -> `SDK Manager`
+    - Make a note of the `Android SDK Location`.
+    - Under `SDK Platforms`, select `Android 6.0 (Marshmallow) API Level 23` or higher. Click `Apply` and then click `OK`. This will install Android SDK Platform on your machine.
 
-11. Create an IBM Cloud Object Storage service by clicking on `Catalog` and select [*Object Storage*](https://cloud.ibm.com/catalog/services/cloud-object-storage) service under `Storage`. Click on `Create`.
+    * Edit `IonicMobileApp/config.xml` and specify the API level in `android-targetSdkVersion` as shown below.
+        ```
+        &lt;preference name="android-minSdkVersion" value="16" /&gt;
+        &lt;preference name="android-targetSdkVersion" <b>value="23"</b> /&gt;
+        ```
+11. Create an [IBM Cloud account](https://cloud.ibm.com/registration), if you don't have one and login with your IBM Cloud credentials.
 
-12. Create an IBM Mobile Foundation service by clicking on `Catalog` and select [*Mobile Foundation*](https://cloud.ibm.com/catalog/services/mobile-foundation) service under `Web and Mobile`. Click on `Create`.
+12. Create a Cloudant database by clicking on `Catalog` and select [*Cloudant*](https://cloud.ibm.com/catalog/services/cloudant) service under `Databases`. Click on `Create`.
+
+13. Create an IBM Cloud Object Storage service by clicking on `Catalog` and select [*Object Storage*](https://cloud.ibm.com/catalog/services/cloud-object-storage) service under `Storage`. Click on `Create`.
+
+14. Create an IBM Mobile Foundation service by clicking on `Catalog` and select [*Mobile Foundation*](https://cloud.ibm.com/catalog/services/mobile-foundation) service under `Web and Mobile`. Click on `Create`.
 
 <hr>
+
 
 ## Configuration
 
@@ -142,11 +159,11 @@ The `myward` database should now list the six documents as shown below under `Ta
 
 * Log in to [IBM Cloud Dashboard](https://cloud.ibm.com/) with your credentials.
 
-* In the IBM Cloud Object Storage dashboard, select `Buckets and objects` page, click on `Create bucket`. Give a unique name for the bucket. Leave the default selections as-is for *Resiliency* (`Cross Region`), *Location* (`us-geo`) and *Storage class* (`Standard`), and click on `Create` as shown below.
+* In the IBM Cloud Object Storage dashboard, select `Buckets` page, click on `Create bucket`. Give a unique name for the bucket. Leave the default selections as-is for *Resiliency* (`Cross Region`), *Location* (`us-geo`) and *Storage class* (`Standard`), and click on `Create` as shown below.
 
     <img src="images/COS_CreateBucket.png" alt="Create a bucket in IBM Cloud Object Storage" width="800" border="10" />
 
-* The *Bucket overview* page for the newly created bucket will get shown. Click on `Add objects`. In `Upload obects` dialog, click on `Add files` and select all the images under [SampleData](SampleData) directory (the six images and their thumbnails). Click `Open`. Click on `Upload` as shown below. Once upload is complete, you should see the images listed under your bucket.
+* The *Bucket overview* page for the newly created bucket will get shown. Click on `Upload` button and then select `Files`. Select transfer type as `Standard Upload` and select all the images under [SampleData](SampleData) directory (the six images and their thumbnails). Click `Open`. Click on `Upload` as shown below. Once upload is complete, you should see the images listed under your bucket.
 
     <img src="images/COS_UploadObjects.png" alt="Upload objects to IBM Cloud Object Storage" width="800" border="10" />
 
@@ -155,13 +172,13 @@ The `myward` database should now list the six documents as shown below under `Ta
 * Create Service ID
     - In a separate browser tab/window, launch the *IBM Cloud Identity & Access Management* dashboard using URL https://cloud.ibm.com/iam/. 
     - In case you have multiple IBM Cloud accounts, then select the target Account, Region, Organization and Space.
-    - Under `Identity & Access` (on the left side of the page), select `Service IDs` and click `Create`. Give a name and description, and click `Create`.
-    - Make a note of the Service ID as shown below.
+    - Select `Service IDs` and click `Create`. Give a name and description, and click `Create`.
+    - Click on the newly created `Service ID` and make a note of the `Service ID` as shown below.
         <img src="images/IAM_CopyServiceID.png" alt="Copy Service ID from IBM Cloud Identity and Access Management dashboard" width="800" border="10" />
 
 * Add Cloud Object Storage *Writer* role to that service ID
-    - Back in *IBM Cloud Object Storage* dashboard, select `Bucket permissions` under `Buckets and objects`.
-    - Click on `Service IDs` tab. Under `Select a service ID`, select the service ID created in the above step. Under `Assign a role to this service ID for this bucket`, select `Writer`. Click `Create policy` as shown below. You should get a confirmation dialog saying “Service permission created“.
+    - Back in *IBM Cloud Object Storage* dashboard, select the newly created `Bucket` under `Buckets`.
+    - Click on `Policies`. In the `Service IDs` tab, under `Select a service ID`, select the service ID created in the above step. Under `Select a role to this bucket`, select `Writer`. Click `Create access policy` as shown below. You should get a confirmation dialog saying “Service permission created“.
 
         <img src="images/COS_CreatePolicyForServiceID.png" alt="Add Writer role to the Service ID in IBM Cloud Object Storage" width="800" border="10" />
 

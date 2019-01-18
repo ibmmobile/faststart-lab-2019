@@ -24,6 +24,8 @@ When you have completed this pattern, you will understand:
 * Maven (for building the application)
 * Java SDK (for building the application)
 * Atom
+* Android Studio
+* Android SDK
 * IBM Cloud account credentials
 * IBM Mobile Foundation Service access credentials
 * IBM Cloud NoSQL DB service

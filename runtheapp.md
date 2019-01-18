@@ -1,19 +1,5 @@
 # Run the app on Android phone
 
-## Install Android Studio and Android SDK platform
-
-* Download and install Android Studio from [https://developer.android.com/studio/index.html](https://developer.android.com/studio/index.html)
-* Install Android SDK Platform 23 (or higher) as below:
-    - Launch Android Studio.
-    - Click on `Configure` -> `SDK Manager`
-    - Make a note of the `Android SDK Location`.
-    - Under `SDK Platforms`, select `Android 6.0 (Marshmallow) API Level 23` or higher. Click `Apply` and then click `OK`. This will install Android SDK Platform on your machine.
-* Edit `IonicMobileApp/config.xml` and specify the API level in `android-targetSdkVersion` as shown below.
-    ```
-    &lt;preference name="android-minSdkVersion" value="16" /&gt;
-    &lt;preference name="android-targetSdkVersion" <b>value="23"</b> /&gt;
-    ```
-
 ## Enable developer options and USB debugging on your Android phone
 
 * Enable USB debugging on your Android phone as per the steps in [https://developer.android.com/studio/debug/dev-options.html](https://developer.android.com/studio/debug/dev-options.html)

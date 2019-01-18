@@ -12,11 +12,11 @@ $ cd Ionic-MFP-App
 Update `IonicMobileApp/config.xml` as below. Change `id`, `name`, `description` and `author` details appropriately.
 
 ```
-&lt;?xml version='1.0' encoding='utf-8'?&gt;
-&lt;widget <b>id="org.mycity.myward"</b> version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:mfp="http://www.ibm.com/mobilefirst/cordova-plugin-mfp"&gt;
-    <b>&lt;name&gt;MyWard&lt;/name&gt;
-    &lt;description&gt;Get your civic issues resolved by posting through this app.&lt;/description&gt;
-    &lt;author email="shivahr@gmail.com" href="https://developer.ibm.com/code/author/shivahr/"&gt;Shiva Kumar H R&lt;/author&gt;</b>
+<?xml version='1.0' encoding='utf-8'?>
+<widget <b>id="org.mycity.myward"</b> version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:mfp="http://www.ibm.com/mobilefirst/cordova-plugin-mfp">
+    <b><name>MyWard</name>
+    <description>Get your civic issues resolved by posting through this app.</description>
+    <author email="shivahr@gmail.com" href="https://developer.ibm.com/code/author/shivahr/">Shiva Kumar H R</author></b>
 ...
 ```
 ## Specify Cloudant credentials in MFP adapter
@@ -27,13 +27,13 @@ Update `IonicMobileApp/config.xml` as below. Change `id`, `name`, `description` 
  * For property `DBName`, leave the default value of `myward` as-is.
 
     ```
-    &lt;mfp:adapter name="MyWardData" ...&gt;
-      <b>&lt;property name="account" displayName="Cloudant account" defaultValue=""/&gt;
-      &lt;property name="key" displayName="Cloudant key" defaultValue=""/&gt;
-      &lt;property name="password" displayName="Cloudant password" defaultValue=""/&gt;
-      &lt;property name="DBName" displayName="Cloudant DB name" defaultValue="myward"/&gt;</b>
+    <mfp:adapter name="MyWardData" ...>
+      <b><property name="account" displayName="Cloudant account" defaultValue=""/>
+      <property name="key" displayName="Cloudant key" defaultValue=""/>
+      <property name="password" displayName="Cloudant password" defaultValue=""/>
+      <property name="DBName" displayName="Cloudant DB name" defaultValue="myward"/></b>
       ...
-    &lt;/mfp:adapter&gt;
+    </mfp:adapter>
     ```
 
 ## Specify Cloud Object Storage credentials in MFP Adapter
@@ -44,11 +44,11 @@ Update `IonicMobileApp/config.xml` as below. Change `id`, `name`, `description` 
 * While creating the bucket in [Step 3.1](#31-create-ibm-cloud-object-storage), if you selected a different Location/Resiliency, then update the `endpointURL` as per the specification in https://cloud.ibm.com/docs/services/cloud-object-storage/basics/endpoints.html#select-regions-and-endpoints.
 
 ```
-&lt;mfp:adapter name="MyWardData" ...&gt;
+<mfp:adapter name="MyWardData" ...>
   ...
-  <b>&lt;property name="endpointURL" displayName="Cloud Object Storage Endpoint Public URL" defaultValue="https://s3-api.us-geo.objectstorage.softlayer.net"/&gt;
-  &lt;property name="bucketName" displayName="Cloud Object Storage Bucket Name" defaultValue=""/&gt;
-  &lt;property name="serviceId" displayName="Cloud Object Storage Service ID" defaultValue=""  /&gt;
-  &lt;property name="apiKey" displayName="Cloud Object Storage API Key" defaultValue=""/&gt;</b>
-&lt;/mfp:adapter&gt;
+  <b><property name="endpointURL" displayName="Cloud Object Storage Endpoint Public URL" defaultValue="https://s3-api.us-geo.objectstorage.softlayer.net"/>
+  <property name="bucketName" displayName="Cloud Object Storage Bucket Name" defaultValue=""/>
+  <property name="serviceId" displayName="Cloud Object Storage Service ID" defaultValue=""  />
+  <property name="apiKey" displayName="Cloud Object Storage API Key" defaultValue=""/></b>
+</mfp:adapter>
 ```
