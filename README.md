@@ -23,6 +23,7 @@ When you have completed this pattern, you will understand:
 * git
 * Maven (for building the application)
 * Java SDK (for building the application)
+* PostMan (for testing the Mobile Foundation adapter)
 * Atom
 * Android Studio
 * Android SDK

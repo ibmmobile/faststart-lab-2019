@@ -82,16 +82,19 @@ Install the following softare and create service instances as mentioned below:
 
     * Edit `IonicMobileApp/config.xml` and specify the API level in `android-targetSdkVersion` as shown below.
         ```
-        &lt;preference name="android-minSdkVersion" value="16" /&gt;
-        &lt;preference name="android-targetSdkVersion" <b>value="23"</b> /&gt;
+        <preference name="android-minSdkVersion" value="16" />
+        <preference name="android-targetSdkVersion" <b>value="23"</b> />
         ```
-11. Create an [IBM Cloud account](https://cloud.ibm.com/registration), if you don't have one and login with your IBM Cloud credentials.
 
-12. Create a Cloudant database by clicking on `Catalog` and select [*Cloudant*](https://cloud.ibm.com/catalog/services/cloudant) service under `Databases`. Click on `Create`.
+11. Install Postman from [https://www.getpostman.com/downloads/](https://www.getpostman.com/downloads/).
 
-13. Create an IBM Cloud Object Storage service by clicking on `Catalog` and select [*Object Storage*](https://cloud.ibm.com/catalog/services/cloud-object-storage) service under `Storage`. Click on `Create`.
+12. Create an [IBM Cloud account](https://cloud.ibm.com/registration), if you don't have one and login with your IBM Cloud credentials.
 
-14. Create an IBM Mobile Foundation service by clicking on `Catalog` and select [*Mobile Foundation*](https://cloud.ibm.com/catalog/services/mobile-foundation) service under `Web and Mobile`. Click on `Create`.
+13. Create a Cloudant database by clicking on `Catalog` and select [*Cloudant*](https://cloud.ibm.com/catalog/services/cloudant) service under `Databases`. Click on `Create`.
+
+14. Create an IBM Cloud Object Storage service by clicking on `Catalog` and select [*Object Storage*](https://cloud.ibm.com/catalog/services/cloud-object-storage) service under `Storage`. Click on `Create`.
+
+15. Create an IBM Mobile Foundation service by clicking on `Catalog` and select [*Mobile Foundation*](https://cloud.ibm.com/catalog/services/mobile-foundation) service under `Web and Mobile`. Click on `Create`.
 
 <hr>
 

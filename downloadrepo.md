@@ -41,7 +41,7 @@ Update `IonicMobileApp/config.xml` as below. Change `id`, `name`, `description` 
 * Open `MobileFoundationAdapters/MyWardData/src/main/adapter-resources/adapter.xml` and update the following properties to point to the Cloud Object Storage created [earlier](/install.md#create-ibm-cloud-object-storage-service-and-populate-it-with-sample-data).
 * Specify value for `bucketName` as created [earlier](/install.md#create-ibm-cloud-object-storage). 
 * Specify `serviceId` and `apiKey` created [earlier](/install.md#create-service-id-and-api-key-for-accessing-objects).
-* While creating the bucket in [Step 3.1](#31-create-ibm-cloud-object-storage), if you selected a different Location/Resiliency, then update the `endpointURL` as per the specification in https://cloud.ibm.com/docs/services/cloud-object-storage/basics/endpoints.html#select-regions-and-endpoints.
+* While creating the bucket in IBM Cloud Object Storage, if you selected a different Location/Resiliency, then update the `endpointURL` as per the specification in https://cloud.ibm.com/docs/services/cloud-object-storage/basics/endpoints.html#select-regions-and-endpoints.
 
 ```
 <mfp:adapter name="MyWardData" ...>
