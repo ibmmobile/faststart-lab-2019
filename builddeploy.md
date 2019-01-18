@@ -47,13 +47,13 @@ This is an optional step to verify the deployed `MyWardData` adapter endpoint.
 
 Follow these steps to generate an `OAuth Token`:
 
-1. Use your HTTP client Postman to make an HTTP POST request to [<MFP-SERVER-HOSTNAME>/mfp/api/az/v1/token](https://<MFP-SERVER-HOSTNAME>/mfp/api/az/v1/token) with the following parameters in `Body` tab. 
+1. Use your HTTP client Postman to make an HTTP POST request to [(MFP-SERVER-HOSTNAME)/mfp/api/az/v1/token](https://<MFP-SERVER-HOSTNAME>/mfp/api/az/v1/token) with the following parameters in `Body` tab. 
 
     - `Content-Type` - `application/x-www-form-urlencoded`
     - `grant_type` - Set the value to `client_credentials`.
     - `scope` - Set the value to `UserLogin`.
 
-    Replace <MFP-SERVER-HOSTNAME> with fully qualified URL of Mobile Foundation service (for example: https://mfp-test-server-demo.mybluemix.net:443)
+    Replace (MFP-SERVER-HOSTNAME) with fully qualified URL of Mobile Foundation service (for example: https://mfp-test-server-demo.mybluemix.net:443)
 
     <img src="images/testingadapter1.png" alt="HTTP POST request" width="800" border="10" />
 
@@ -78,9 +78,9 @@ Follow these steps to generate an `OAuth Token`:
 
 ### Testing the Adapter endpoint
 
-1. Create a HTTP GET request to [<MFP-SERVER-HOSTNAME>/mfp/api/adapters/MyWardData/](http://<MFP-SERVER-HOSTNAME>/mfp/api/adapters/MyWardData/).
+1. Create a HTTP GET request to [(MFP-SERVER-HOSTNAME)/mfp/api/adapters/MyWardData/](http://<MFP-SERVER-HOSTNAME>/mfp/api/adapters/MyWardData/).
 
-    Replace `<MFP-SERVER-HOSTNAME>` with fully qualified URL of Mobile Foundation service (For example: https://mfp-test-server-demo.mybluemix.net:443)
+    Replace `(MFP-SERVER-HOSTNAME)` with fully qualified URL of Mobile Foundation service (For example: https://mfp-test-server-demo.mybluemix.net:443)
 
 2. Add an HTTP header with the name `Authorization` and the value of access_token received in previous step (starting with Bearer). Adding test token will make the security framework to skip any security challenges protecting the adapter resource.
 
