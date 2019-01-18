@@ -14,23 +14,6 @@ When you have completed this pattern, you will understand:
 * How to fetch data from Cloudant service to mobile app via MFP adapter as well as post new data to Cloudant.
 * How to customize the Ionic app logo and splash, and build the release apk for uploading to public/private app stores.
 
-## Pre-requisites
-
-* Node.js
-* Cordova
-* Ionic
-* Mobile Foundation CLI
-* git
-* Maven (for building the application)
-* Java SDK (for building the application)
-* PostMan (for testing the Mobile Foundation adapter)
-* Atom
-* Android Studio
-* Android SDK
-* IBM Cloud account credentials
-* IBM Mobile Foundation Service access credentials
-* IBM Cloud NoSQL DB service
-
 ## Next Steps
 
 * [Installation and Configuration](install.md)
