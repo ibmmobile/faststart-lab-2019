@@ -49,9 +49,9 @@ Follow these steps to generate an `OAuth Token`:
 
 1. Use your HTTP client Postman to make an HTTP POST request to [<MFP-SERVER-HOSTNAME>/mfp/api/az/v1/token](https://<MFP-SERVER-HOSTNAME>/mfp/api/az/v1/token) with the following parameters in `Body` tab. 
 
-    `Content-Type` - `application/x-www-form-urlencoded`
-    `grant_type` - Set the value to `client_credentials`.
-    `scope` - Set the value to `UserLogin`.
+    - `Content-Type` - `application/x-www-form-urlencoded`
+    - `grant_type` - Set the value to `client_credentials`.
+    - `scope` - Set the value to `UserLogin`.
 
     Replace <MFP-SERVER-HOSTNAME> with fully qualified URL of Mobile Foundation service (for example: https://mfp-test-server-demo.mybluemix.net:443)
 
