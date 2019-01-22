@@ -2,7 +2,7 @@
 
 When developing your enterprise mobile app that needs centralized hosting of data, use of cloud-native services such as [Cloudant No-SQL Database](https://www.ibm.com/cloud/cloudant) for storing textual data and [Object Storage service](https://www.ibm.com/cloud/object-storage) for storing image/video/audio data, allows you to quickly go from idea-conception to reality. The [Mobile Foundation service](https://www.ibm.com/cloud/mobile-foundation) available from IBM Cloud provides a scalable mobile access gateway for securely accessing those backend services, and it provides other essential mobile backend capabilities such as push notifications, app lifecycle management and app analytics.
 
-This code pattern gives you step by step instructions for developing an [Ionic/Cordova](https://ionicframework.com/) based hybrid mobile app that securely connects to Cloudant and Object Storage services via IBM Mobile Foundation (aka MFP) service.
+This lab is derived from [code pattern](https://developer.ibm.com/patterns/develop-hybrid-mobile-app-with-cloud-native-back-end/) gives you step by step instructions for developing an [Ionic/Cordova](https://ionicframework.com/) based hybrid mobile app that securely connects to Cloudant and Object Storage services via IBM Mobile Foundation (aka MFP) service.
 
 When you have completed this pattern, you will understand:
 * How to authenticate users (through preemptive login) using MFP security adapter.
@@ -20,7 +20,4 @@ When you have completed this pattern, you will understand:
 * [Download source repo and customize](downloadrepo.md)
 * [Build and deploy MFP adapters](builddeploy.md)
 * [Run application on Android phone](runtheapp.md)
-
-
-
 
