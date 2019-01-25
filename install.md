@@ -50,13 +50,12 @@ Install the following softare and create service instances as mentioned below:
 6. Install Maven.
 
     On Mac, you can use `brew install` for installing Maven as shown below:
-
-        ```
-        $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-        $ brew install maven
-        $ mvn --version
-        Apache Maven 3.5.0 ...
-        ```
+    ```
+    $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    $ brew install maven
+    $ mvn --version
+    Apache Maven 3.5.0 ...
+    ```
 
 7. Install Java SDK from [http://www.oracle.com/technetwork/java/javase/downloads/index.html](http://www.oracle.com/technetwork/java/javase/downloads/index.html) and check the java version.
     ```
@@ -67,10 +66,9 @@ Install the following softare and create service instances as mentioned below:
 8. Install an [IDE for TypeScript](https://www.typescriptlang.org/index.html#download-links) such as [Atom](https://atom.io/) on Mac.
 
     After installing [Atom](https://atom.io/), install TypeScript plugin for Atom as shown below.
-
-        ```
-        apm install atom-typescript
-        ```
+     ```
+    apm install atom-typescript
+    ```
 
 9. Download and install Android Studio from [https://developer.android.com/studio/index.html](https://developer.android.com/studio/index.html).
 
