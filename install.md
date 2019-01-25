@@ -74,27 +74,15 @@ Install the following softare and create service instances as mentioned below:
 
 9. Download and install Android Studio from [https://developer.android.com/studio/index.html](https://developer.android.com/studio/index.html).
 
-10. Install Android SDK Platform 23 (or higher) as below:
-    - Launch Android Studio.
-    - Click on `Configure` -> `SDK Manager`
-    - Make a note of the `Android SDK Location`.
-    - Under `SDK Platforms`, select `Android 6.0 (Marshmallow) API Level 23` or higher. Click `Apply` and then click `OK`. This will install Android SDK Platform on your machine.
+10. Install Postman from [https://www.getpostman.com/downloads/](https://www.getpostman.com/downloads/).
 
-    * Edit `IonicMobileApp/config.xml` and specify the API level in `android-targetSdkVersion` as shown below.
-        ```
-        <preference name="android-minSdkVersion" value="16" />
-        <preference name="android-targetSdkVersion" <b>value="23"</b> />
-        ```
+11. Create an [IBM Cloud account](https://cloud.ibm.com/registration), if you don't have one and login with your IBM Cloud credentials.
 
-11. Install Postman from [https://www.getpostman.com/downloads/](https://www.getpostman.com/downloads/).
+12. Create a Cloudant database by clicking on `Catalog` and select [*Cloudant*](https://cloud.ibm.com/catalog/services/cloudant) service under `Databases`. Provide a Name and select `Use both legacy credentials and IAM` option under **Available authentication methods**. Click on `Create`.
 
-12. Create an [IBM Cloud account](https://cloud.ibm.com/registration), if you don't have one and login with your IBM Cloud credentials.
+13. Create an IBM Cloud Object Storage service by clicking on `Catalog` and select [*Object Storage*](https://cloud.ibm.com/catalog/services/cloud-object-storage) service under `Storage`. Click on `Create`.
 
-13. Create a Cloudant database by clicking on `Catalog` and select [*Cloudant*](https://cloud.ibm.com/catalog/services/cloudant) service under `Databases`. Click on `Create`.
-
-14. Create an IBM Cloud Object Storage service by clicking on `Catalog` and select [*Object Storage*](https://cloud.ibm.com/catalog/services/cloud-object-storage) service under `Storage`. Click on `Create`.
-
-15. Create an IBM Mobile Foundation service by clicking on `Catalog` and select [*Mobile Foundation*](https://cloud.ibm.com/catalog/services/mobile-foundation) service under `Web and Mobile`. Click on `Create`.
+14. Create an IBM Mobile Foundation service by clicking on `Catalog` and select [*Mobile Foundation*](https://cloud.ibm.com/catalog/services/mobile-foundation) service under `Web and Mobile`. Click on `Create`.
 
 <hr>
 
@@ -118,7 +106,7 @@ Install the following softare and create service instances as mentioned below:
 
     ```java
     {
-      "_id": "7fc63023799dfda9582609e75127b4fa"<b>,
+      "_id": "7fc63023799dfda9582609e75127b4fa",
       "reportedBy": "shivahr@gmail.com",
       "reportedDateTime": "20171125_152627",
       "picture": {
@@ -133,7 +121,7 @@ Install the following softare and create service instances as mentioned below:
           13.0773568
         ]
       },
-      "address": "Basaveshwara Temple road (behind Market Road), Hosakote, Bangalore 562114"</b>
+      "address": "Basaveshwara Temple road (behind Market Road), Hosakote, Bangalore 562114"
     }
     ```
 
