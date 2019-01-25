@@ -30,7 +30,7 @@ Update `IonicMobileApp/config.xml` as below. Change `id`, `name`, `description` 
 * Edit `IonicMobileApp/config.xml` and specify the API level in `android-targetSdkVersion` as shown below.
 
     ```
-    <preference name="android-minSdkVersion" value="16" />
+    <preference name="android-minSdkVersion" value="18" />
     <preference name="android-targetSdkVersion" value="23" />
     ```
 
